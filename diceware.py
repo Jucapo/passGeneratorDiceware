@@ -1,12 +1,14 @@
 import sys
 import argparse
 import random
+import time
+
+start_time = time.time()
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-f", "--file", help="Nombre de la lista")
-parser.add_argument("-n", "--num", help="Numero de palabras")
+parser.add_argument("-f", "--file", help="Nombre de la lista [DW-Espanol.txt] [DW-Englis.txt] [DW-French.txt] [DW-German.txt]")
+parser.add_argument("-n",  "--num", help="Numero de palabras ")
 args = parser.parse_args()
-
 
 if (len(sys.argv) == 5):
     if (args.file and args.num):  
@@ -27,6 +29,8 @@ if (len(sys.argv) == 5):
                     if (palabra >= 0):
                         print(linea.rstrip('\n'))
                         password += linea.split(' ')[1].rstrip('\n')           
-        print('Su contrasena es: ' + password)
+        print('\nSu contrasena es: ' + password)
+        print('\nTiempo de Ejecución:' + str(time.time()-start_time) + 'seg.\n')
+        
 else:
     print('Uso: -f [archivo Lista] -n  [Numero de palabras]')

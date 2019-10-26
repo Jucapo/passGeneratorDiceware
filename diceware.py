@@ -33,7 +33,15 @@ if (len(sys.argv) == 5 and int(args.num) >= 0):
         print('\nTiempo de Ejecución:' + str(time.time()-start_time) + 'seg.\n')
         
 else:
-    print('\n\nUniversidad Autonoma de Occidente')
-    print('  Juan Camilo Posso Ponce')
-    print('  Jairo Torres\n\n')
-    print('Uso: python diceware.py -f Lista.txt -n  numeroPalabras \n\nEjemplo: python diceware.py -f Lista.txt -n  3')
+    print("""
+	__________________________________________________________________________________________________
+	Autores:	Juan Camilo Posso Ponce		juan.posso@uao.edu.co
+			Jairo Torres Echevery	        jairo.torres@uao.edu.co
+	__________________________________________________________________________________________________
+	Universidad Autónoma de Occidente
+	Especialización en Seguridad Infromática
+	Certificados y Firmas Digitales
+	Siler Amador Donado
+	2019-II
+    """)
+    print('Uso: python3 diceware.py -f Lista.txt -n  numeroPalabras \n\nEjemplo: python diceware.py -f Lista.txt -n  3\n\n')

@@ -7,10 +7,10 @@ start_time = time.time()
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-f", "--file", help="Nombre de la lista [DW-Espanol.txt] [DW-Englis.txt] [DW-French.txt] [DW-German.txt]")
-parser.add_argument("-n",  "--num", help="Numero de palabras ")
+parser.add_argument("-n",  "--num", help="Numero (positivo) de palabras ")
 args = parser.parse_args()
 
-if (len(sys.argv) == 5):
+if (len(sys.argv) == 5 and int(args.num) >= 0):
     if (args.file and args.num):  
         password = ''
         numWords = int(args.num)
@@ -33,4 +33,7 @@ if (len(sys.argv) == 5):
         print('\nTiempo de Ejecución:' + str(time.time()-start_time) + 'seg.\n')
         
 else:
-    print('Uso: -f [archivo Lista] -n  [Numero de palabras]')
+    print('\n\nUniversidad Autonoma de Occidente')
+    print('  Juan Camilo Posso Ponce')
+    print('  Jairo Torres\n\n')
+    print('Uso: python diceware.py -f Lista.txt -n  numeroPalabras \n\nEjemplo: python diceware.py -f Lista.txt -n  3')
